@@ -23,5 +23,7 @@ const showNews = (response) => {
     console.log(response.photos[1].img_src)
     let img = response.photos[1].img_src;
     $('#img').append(`<img src="${img}" alt="${img}">`);
+  } else {
+    $('.showErrors').text(`There was an error: ${response.message}`);
   }
 };
