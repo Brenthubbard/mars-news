@@ -20,8 +20,8 @@ import './css/styles.css';
   });
 const showNews = (response) => {
   if (response.photos) {
-    console.log (response.photos)
-    // $('.')
+    console.log(response.photos[1].img_src)
+    let img = response.photos[1].img_src;
+    $('#img').append(`<img src="${img}" alt="${img}">`);
   }
-}
-
+};
